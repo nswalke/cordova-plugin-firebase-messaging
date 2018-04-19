@@ -59,6 +59,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_notification" />
+            <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/notification_bg_color" />
             <service android:name="by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService">
                 <intent-filter>
                     <action android:name="com.google.firebase.MESSAGING_EVENT"/>
