@@ -59,7 +59,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             </feature>
         </config-file>
                
-        <config-file target="./res/values/colors.xml" parent="/resources">
+        <config-file target="./res/values/strings.xml" parent="/resources">
             <string name="notification_bg_color">$NOTIFICATION_BG_COLOR</string>
         </config-file>
 
