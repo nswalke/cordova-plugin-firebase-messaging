@@ -7,13 +7,14 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <description>Cordova plugin for Firebase Cloud Messaging</description>
     <license>MIT</license>
     <keywords>cordova</keywords>
-    <repo>https://github.com/chemerisuk/cordova-plugin-firebase-messaging</repo>
-    <issue>https://github.com/chemerisuk/cordova-plugin-firebase-messaging/issues</issue>
+    <repo>https://github.com/nswalke/cordova-plugin-firebase-messaging</repo>
+    <issue>https://github.com/nswalke/cordova-plugin-firebase-messaging/issues</issue>
 
     <js-module src="www/FirebaseMessaging.js" name="FirebaseMessaging">
         <merges target="cordova.plugins.firebase.messaging" />
     </js-module>
 
+    <preference name="NOTIFICATION_BG_COLOR" />
     <engines>
         <engine name="cordova" version=">=6.0.0"/>
         <engine name="cordova-android" version=">=6.0.0"/>
@@ -56,6 +57,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseMessagingPlugin" />
                 <param name="onload" value="true" />
             </feature>
+        </config-file>
+               
+        <config-file target="res/values/colors.xml" parent="/*">
+            <string name="notification_bg_color">$NOTIFICATION_BG_COLOR</string>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
